@@ -1,0 +1,589 @@
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a25;
+    --bg-terminal: #0d1117;
+    --text-primary: #d4c5a0;
+    --text-secondary: #a89970;
+    --text-dim: #6b5f47;
+    --text-terminal: #c9d1d9;
+    --text-prompt: #e8b84b;
+    --accent-gold: #c9a84c;
+    --accent-gold-bright: #e8c55a;
+    --border-subtle: #2a2a35;
+    --border-gold: rgba(201, 168, 76, 0.3);
+    --font-display: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    --font-body: Georgia, 'Times New Roman', serif;
+    --font-mono: 'Menlo', 'Consolas', 'Courier New', monospace;
+    --content-max-width: 900px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.1vw, 1.125rem);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Navigation --- */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-inner {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    transition: color 0.2s;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-gold);
+    border-bottom-color: var(--accent-gold);
+}
+
+/* --- Sections --- */
+
+section {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--accent-gold);
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+/* --- Hero --- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    max-width: 100%;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--accent-gold-bright);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    max-width: 700px;
+}
+
+.hero-tagline {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--border-gold);
+    color: var(--accent-gold);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.1em;
+    background: var(--text-prompt);
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.vision p { margin-bottom: 1.25rem; max-width: 720px; }
+.vision strong { color: var(--accent-gold); }
+
+/* --- Narrative Panel --- */
+
+.narrative-panel {
+    background: var(--bg-terminal);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 2rem 2.25rem;
+    font-family: var(--font-body);
+    font-size: clamp(0.92rem, 1.2vw, 1rem);
+    line-height: 1.85;
+    color: var(--text-primary);
+    max-width: 640px;
+    width: 100%;
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.08);
+}
+
+.narrative-panel p {
+    margin-bottom: 1rem;
+}
+
+.narrative-panel p:last-child {
+    margin-bottom: 0;
+}
+
+.narrative-panel .narrative-location {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.narrative-panel .narrative-exits {
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.narrative-panel .narrative-combat {
+    color: #e8b4a0;
+}
+
+.narrative-panel .narrative-combat-intense {
+    color: #e06c60;
+}
+
+.narrative-panel .narrative-telegraph {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.narrative-panel .narrative-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--text-prompt);
+}
+
+/* --- Gameplay Section --- */
+
+.gameplay-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.gameplay-dual .narrative-panel,
+.gameplay-dual .action-panel {
+    max-width: 100%;
+}
+
+#experience {
+    max-width: 1100px;
+}
+
+.gameplay-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Action Panel --- */
+
+.action-panel {
+    background: var(--bg-terminal);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--text-terminal);
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.05);
+}
+
+.action-panel-stats {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.78rem;
+}
+
+.stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.stat-name {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.stat-hp {
+    color: var(--text-terminal);
+}
+
+.stat-hp-low {
+    color: #e06c60;
+}
+
+.stat-bar {
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border-subtle);
+    width: 80px;
+    margin-top: 2px;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: #4a9;
+    transition: width 0.3s;
+}
+
+.stat-bar-fill.low {
+    background: #e06c60;
+}
+
+.action-log-line {
+    padding: 0.15rem 0;
+}
+
+.action-hit {
+    color: #e06c60;
+}
+
+.action-miss {
+    color: var(--text-dim);
+}
+
+.action-player-hit {
+    color: #4a9;
+}
+
+.action-tag {
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    margin-left: 0.25rem;
+    opacity: 0.7;
+}
+
+.action-roll {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-dim);
+    font-size: 0.72rem;
+}
+
+.gameplay-caption {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-dim);
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .gameplay-dual {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Feature Cards --- */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-2px);
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+}
+
+.card h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* --- Comparison Table --- */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 600px;
+}
+
+.comparison-table th {
+    background: var(--bg-card);
+    color: var(--accent-gold);
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+}
+
+.comparison-table tr:nth-child(even) td {
+    background: rgba(18, 18, 26, 0.5);
+}
+
+.comparison-table tr.rpgfuture-row td {
+    color: var(--accent-gold);
+    font-weight: 600;
+    background: rgba(201, 168, 76, 0.06);
+}
+
+.comparison-pullquote {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--accent-gold);
+    font-style: italic;
+    color: var(--text-primary);
+    background: rgba(201, 168, 76, 0.04);
+    border-radius: 0 6px 6px 0;
+    line-height: 1.7;
+}
+
+/* --- World Cards --- */
+
+.world-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.world-card h3 {
+    font-family: var(--font-display);
+    color: var(--accent-gold);
+    margin-bottom: 0.25rem;
+}
+
+.world-card .world-source {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+}
+
+.world-card p {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* --- WorldBuilder --- */
+
+.worldbuilder-content p {
+    margin-bottom: 1rem;
+    max-width: 720px;
+}
+
+.worldbuilder-features {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.worldbuilder-features li { padding: 0.3rem 0; color: var(--text-secondary); font-size: 0.95rem; }
+.worldbuilder-features li::before { content: '◆ '; color: var(--accent-gold); }
+
+/* --- Footer --- */
+
+.footer {
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.footer-tech {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+}
+
+.footer-platform {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Animations --- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+    .nav-inner {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    section {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .hero {
+        padding: 5rem 1.25rem 3rem;
+    }
+
+    .terminal {
+        font-size: 0.78rem;
+        padding: 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}

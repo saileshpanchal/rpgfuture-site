@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPGFuture — A Prose-First RPG Where Imagination Is the Renderer</title>
-    <meta name="description" content="A prose-first RPG with hidden Pathfinder d20 mechanics, LLM-enhanced narrative, and graph-based world state. Coming soon for iOS and macOS.">
+    <title>RPGFuture — Your Wounds Tell the Story</title>
+    <meta name="description" content="A prose-first RPG where wounds cascade, enemies think, and every battle reads like a novel. Full Pathfinder mechanics — no visible dice. Coming soon for iOS and macOS.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,10 +14,10 @@
     <div class="nav-inner">
         <a href="#hero" class="nav-brand">RPGFuture</a>
         <ul class="nav-links">
-            <li><a href="#vision">Vision</a></li>
+            <li><a href="#world-reacts">The World Reacts</a></li>
+            <li><a href="#combat">Combat That Scars</a></li>
+            <li><a href="#authored">Every Word Authored</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#innovations">Innovations</a></li>
-            <li><a href="#comparison">Comparison</a></li>
             <li><a href="#worlds">Worlds</a></li>
             <li><a href="#worldbuilder">WorldBuilder</a></li>
         </ul>
@@ -27,52 +27,145 @@
 <!-- Hero -->
 <section class="hero" id="hero">
     <h1 class="hero-title">RPGFuture</h1>
-    <p class="hero-subtitle">A Prose-First RPG Where Imagination Is the Renderer</p>
-    <p class="hero-tagline">"Real mechanics. Real narrative. No visible dice."</p>
+    <p class="hero-subtitle">Your Wounds Tell the Story</p>
+    <p class="hero-tagline">"Real mechanics. Authored prose. No visible dice."</p>
 
     <div class="narrative-panel">
-        <p>You head down. <span class="narrative-location">It is pitch black.</span> You are likely to be eaten by a grue. <span class="narrative-exits">You can go up, north, or south.</span></p>
-        <p>You head north. <span class="narrative-location">It is pitch black.</span> You are likely to be eaten by a grue. <span class="narrative-exits">You can go south, east, or west.</span></p>
-        <p><span class="narrative-telegraph">Nasty-looking troll is here. A nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.</span></p>
-        <p class="narrative-combat">Nasty-looking troll's eyes gleam as it winds up with its Bloody Axe. Its stance suggests a committed attack.</p>
-        <p class="narrative-combat">You twist aside at the last moment, Nasty-looking troll's Bloody Axe missing by a hair's breadth.</p>
-        <p class="narrative-combat-intense">Nasty-looking troll strikes your left arm with Bloody Axe. Your grip slips, your Elvish Sword flying from your hand!</p>
+        <p class="narrative-combat-intense">With a savage arc, your Elvish Sword severs the troll's sword arm at the elbow. The limb tumbles away, weapon still clutched in its grip.</p>
+        <p class="narrative-combat">It staggers back, clutching the stump — then lunges at you with its remaining fist. Desperate, weakened, but refusing to fall.</p>
+        <p class="narrative-combat">The troll's single eye darts toward the passage behind it. With a bellow that is equal parts rage and bewilderment, it turns and crashes away through the darkness. The ground trembles with each retreating footfall.</p>
         <div class="narrative-input"><span>&gt;</span> <span class="terminal-cursor"></span></div>
     </div>
+
+    <p class="hero-caption fade-in">Three systems working together: the limb wound drops the weapon. The penalty engine degrades the attack. The morale system triggers retreat — not at zero HP, but when the troll's personality says <em>enough</em>.</p>
 
     <span class="hero-cta">Coming Soon for iOS and macOS</span>
 </section>
 
-<!-- The Vision -->
-<section id="vision" class="vision">
-    <h2 class="section-title fade-in">The Vision</h2>
+<!-- The World Reacts -->
+<section id="world-reacts">
+    <h2 class="section-title fade-in">The World Reacts</h2>
+    <p class="section-subtitle fade-in">Enemies don't just fight to zero HP. They think, fear, and remember.</p>
 
-    <p class="fade-in"><strong>What if a text adventure had a real combat engine?</strong> Not simplified stat checks or coin-flip RNG — a complete d20 system with six attributes, base attack bonuses, armor class, feats, saving throws, and a three-action economy. Every attack rolls a real d20. Every hit location matters. Every wound has mechanical consequences.</p>
+    <div class="feature-block fade-in">
+        <h3>Enemies That Surrender</h3>
+        <p>Every NPC has a psychological profile — morale thresholds, personality traits, and moral lines they won't cross. A wounded troll retreats at 25% health. The thief surrenders at 15% — but tries to negotiate first. The cyclops? It doesn't care about HP. Say "Odysseus" and it flees in primal terror, regardless of health.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-combat">The thief flicks something small and bright at your eyes — a distraction, nothing more — and by the time you blink, it has melted into the shadows like smoke.</p>
+        </div>
+    </div>
 
-    <p class="fade-in"><strong>Under the surface, it's d20 + BAB + STR vs AC.</strong> You never see the math. You never see the dice. You see prose — authored, polished, and woven into a living narrative. Your input sits quietly at the bottom of the screen. The narrative view reads like a book, with your actions blended seamlessly into the author's prose. The mechanics are Pathfinder. The experience is a novel you're writing.</p>
+    <div class="feature-block fade-in">
+        <h3>Moral Lines</h3>
+        <p>NPCs have ethics that constrain their behavior. The thief won't kill you in your sleep. The troll won't negotiate — it only understands force. These rules aren't suggestions; they mechanically filter which strategies an NPC can choose. The same enemy makes different tactical decisions across playthroughs — weighted-random selection from 40+ named strategies means no two fights play out identically.</p>
+    </div>
 
-    <p class="fade-in"><strong>Authored content enhanced by AI — not generated by it.</strong> Every room, every NPC, every dialogue tree is hand-crafted. LLM narration polishes dramatic moments — composing combat poetry, threading scene descriptions, varying phrasing so repetition never breaks immersion. If the AI is unavailable, template fallback keeps the game running perfectly. This isn't AI improvisation. It's AI composition.</p>
+    <div class="feature-block fade-in">
+        <h3>Trust-Gated Secrets</h3>
+        <p>NPCs remember how you've treated them. Threaten the thief and it fights harder. Show compassion and its trust rises — at 70%, it reveals something it has never told anyone: it was once an adventurer like you. These aren't scripted cutscenes. The trust system gates what the NPC is willing to share, and the prose adapts accordingly.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-combat">The thief's sardonic mask slips for just a moment. "I had a party once, you know. Good people. We went into the barrow together." A pause. "I came out alone."</p>
+        </div>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Enemies That Telegraph</h3>
+        <p>Before each combat round resolves, every NPC telegraphs its intentions through prose. A stunned troll staggers. A desperate enemy winds up for a reckless swing. A calculating thief feints low, hinting at where the real strike will come. These aren't flavor text — the severity level reflects actual combat math, and paying attention gives you a real tactical edge.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-telegraph">The troll's eyes gleam as it winds up with its bloody axe. Its stance suggests a committed, reckless attack.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Combat That Scars -->
+<section id="combat">
+    <h2 class="section-title fade-in">Combat That Scars</h2>
+    <p class="section-subtitle fade-in">Every wound has mechanical consequences. Every scar tells a story.</p>
+
+    <div class="feature-block fade-in">
+        <h3>Limb-Specific Wounds That Cascade</h3>
+        <p>Attacks target specific body parts — head, torso, arms, legs. Each limb tracks its own damage through six severity tiers: scratched, wounded, injured, mangled, crippled, destroyed. A scratched arm is cosmetic. A mangled sword arm applies -4 to attack rolls. A crippled arm <em>drops whatever it's holding</em>.</p>
+        <p>This is the "Black Knight" design philosophy: enemies keep fighting with serious wounds, but they fight <em>worse</em>. A troll with a crippled sword arm drops its axe and swings with bare fists. One with mangled legs can barely stand. Wound penalties stack and persist — the enemy you've been fighting for three rounds is genuinely weaker than the one you met in round one.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-combat-intense">Your blade sweeps across the troll's sword arm, carving deep into muscle and bone. Its grip fails — the bloody axe clatters to the stone floor.</p>
+            <p class="narrative-combat">The troll snarls, swinging its remaining fist at you. The blow is clumsy, desperate.</p>
+        </div>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Bleeding Persistence</h3>
+        <p>Wounds at "injured" or worse begin to bleed. Each bleeding wound drains 1 HP per round — a character with three bleeding limbs loses 3 HP every turn until treated. Severed limbs bleed automatically. Time pressure becomes real: do you press the attack or fall back before the bleeding finishes you?</p>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Fumbles With Consequences</h3>
+        <p>A natural 1 isn't just a miss — it's a disaster. Roll a critical failure and you might drop your weapon (it's mechanically unequipped — you fight unarmed until you retrieve it) or stumble and fall prone (-4 to your next melee attack). These aren't narrative flourishes. They change the mechanical state of the fight.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-combat-intense">Your grip slips, your Elvish Sword flying from your hand! It skitters across the stone floor, just out of reach.</p>
+        </div>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>The Dead Remember</h3>
+        <p>Return to a room where you killed an enemy and the body description reflects the specific wounds you dealt. If you severed the troll's arm, the body mentions it. If you pierced its heart, that's what you see. The world remembers what happened — even after you've moved on.</p>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Full Pathfinder Under the Hood</h3>
+        <p>Every attack resolves d20 + base attack bonus + strength modifier vs. armor class. Critical hits require confirmation rolls. The PF2e three-action economy gives you tactical choices each round — attack again at -5 penalty, switch to a defensive stance, or try something creative. Six attributes, feats, saving throws, armor penetration — the complete ruleset runs silently beneath the prose.</p>
+    </div>
+</section>
+
+<!-- Every Word Authored -->
+<section id="authored">
+    <h2 class="section-title fade-in">Every Word Authored</h2>
+    <p class="section-subtitle fade-in">Not AI-generated. AI-composed. The difference is everything.</p>
+
+    <div class="feature-block fade-in">
+        <h3>Four Layers of Prose</h3>
+        <p>Every combat event passes through a four-tier narrative pipeline. First, the game checks for a world-specific Ink story — authored dialogue written for that exact moment. Second, it checks for an LLM rewrite tag — dramatic moments get composed through an on-device language model. Third, it selects from hundreds of wound templates matched to location, severity, and damage type — a slashing wound to the arm reads differently from a bludgeoning blow to the chest. Fourth, a clean fallback ensures nothing ever breaks.</p>
+        <p>The result: combat reads like authored fiction, but no two fights produce identical text. The game <em>composes</em> — assembling authored pieces into new arrangements — rather than <em>generating</em> from nothing.</p>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Branching Dialogue With Real Consequences</h3>
+        <p>NPC conversations use Ink — the same narrative scripting language behind <em>80 Days</em> and <em>Heaven's Vault</em>. Dialogue branches based on world state: show the troll your elvish sword and it reacts differently than if you're unarmed. Choose to let the troll flee and the passages open — the same world-state change as killing it, achieved through words instead of violence.</p>
+        <div class="narrative-panel narrative-panel-inline">
+            <p class="narrative-combat">The troll eyes your blade warily. "Elf-steel," it growls. "Where you get elf-steel?"</p>
+            <p class="narrative-choice">1. "I took it from the last troll I killed."</p>
+            <p class="narrative-choice">2. "It was a gift. I'd rather not use it."</p>
+            <p class="narrative-choice">3. Draw the sword silently.</p>
+        </div>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>Actions Compose Into Prose</h3>
+        <p>Pick up three items and each appears instantly — "Taken." — but two seconds later, those individual confirmations are replaced with a composed paragraph: "You collect the elvish sword, the brass lantern, and the crumpled leaflet, tucking each away." Multiple verbs in one session (take, read, open) weave together naturally: "You pocket the leaflet and flip through it while checking the mailbox — it swings open with a creak."</p>
+    </div>
+
+    <div class="feature-block fade-in">
+        <h3>NPC Voice Is Data-Driven</h3>
+        <p>Every NPC has a defined voice — register, pace, verbal tics, example lines. The troll speaks in broken shouts: "NO PASS! Troll's bridge! TROLL'S!" The thief is sardonic, measured, always calculating. When the language model polishes a dramatic moment, it writes <em>in that character's voice</em>, not in generic fantasy prose. Pronouns are data-driven too: the troll is "it," human NPCs use "they" by default, and world authors can set any pronoun per character.</p>
+    </div>
 </section>
 
 <!-- Gameplay Experience -->
 <section id="experience">
     <h2 class="section-title fade-in">Gameplay Experience</h2>
-    <p class="section-subtitle fade-in">An authentic combat session from the Zork I world. Narrative flows as prose — with a combat action panel for the dice-rolling fun.</p>
+    <p class="section-subtitle fade-in">Prose on the left. Dice on the right. Both real, both running simultaneously.</p>
 
     <div class="gameplay-dual fade-in">
         <!-- Narrative Panel (what the player reads) -->
         <div>
             <div class="gameplay-label">Narrative View</div>
             <div class="narrative-panel">
-                <p>You head down. <span class="narrative-location">It is pitch black.</span> You are likely to be eaten by a grue. <span class="narrative-exits">You can go up, north, or south.</span></p>
-                <p>You head north. <span class="narrative-location">It is pitch black.</span> You are likely to be eaten by a grue. <span class="narrative-exits">You can go south, east, or west.</span></p>
-                <p><span class="narrative-telegraph">Nasty-looking troll is here. A nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.</span></p>
-                <p class="narrative-combat">Nasty-looking troll's eyes gleam as it winds up with its Bloody Axe. Its stance suggests a committed attack.</p>
-                <p class="narrative-combat">You twist aside at the last moment, Nasty-looking troll's Bloody Axe missing by a hair's breadth.</p>
-                <p class="narrative-combat">Your wild swing cuts only air. Nasty-looking troll strikes your left arm with Bloody Axe.</p>
-                <p class="narrative-combat-intense">Your grip slips, your Elvish Sword flying from your hand! Nasty-looking troll's Bloody Axe carves a bloody gash across your ribs. You wince at the wound.</p>
-                <p class="narrative-combat">You strike Nasty-looking troll's left leg with Elvish Sword. Nasty-looking troll's devastating strike lays your abdomen open. You collapse to your knees, clutching the terrible wound.</p>
-                <p class="narrative-combat-intense">Your wild swing cuts only air. Nasty-looking troll's blade cleaves through your chest. You stagger back, eyes wide with disbelief, before crumpling to the ground. The wound is catastrophic.</p>
+                <p><span class="narrative-telegraph">The troll is here, brandishing a bloody axe. It blocks all passages out of the room.</span></p>
+                <p class="narrative-combat">The troll's eyes gleam as it winds up with its bloody axe. Its stance suggests a committed attack.</p>
+                <p class="narrative-combat">You twist aside at the last moment, the troll's axe whistling past your ear.</p>
+                <p class="narrative-combat-intense">Your blade carves across the troll's sword arm, drawing a spray of dark blood. Its grip wavers — the axe dips.</p>
+                <p class="narrative-combat">The troll snarls through clenched teeth, fighting through the pain. It swings again, slower now, favoring the wounded arm.</p>
+                <p class="narrative-combat-intense">Your Elvish Sword severs the troll's sword arm at the elbow. The limb tumbles away, axe still clutched in its grip. The troll staggers, then swings its remaining fist — desperate, weakened, refusing to fall.</p>
+                <p class="narrative-combat">The troll's single eye darts toward the passage behind it. With a bellow of rage and bewilderment, it crashes away through the darkness.</p>
             </div>
         </div>
 
@@ -83,146 +176,95 @@
                 <div class="action-panel-stats">
                     <div class="stat-block">
                         <span class="stat-name">Adventurer</span>
-                        <span class="stat-hp-low">HP 12% &nbsp;AC 2</span>
-                        <div class="stat-bar"><div class="stat-bar-fill low" style="width: 12%"></div></div>
+                        <span class="stat-hp">HP 85% &nbsp;AC 14</span>
+                        <div class="stat-bar"><div class="stat-bar-fill" style="width: 85%"></div></div>
                     </div>
                     <div class="stat-block" style="text-align: right">
-                        <span class="stat-name">Nasty-looking Troll</span>
-                        <span class="stat-hp">HP 81% &nbsp;AC 15</span>
-                        <div class="stat-bar"><div class="stat-bar-fill" style="width: 81%"></div></div>
+                        <span class="stat-name">Troll</span>
+                        <span class="stat-hp-low">HP 31% &nbsp;AC 11 <span class="penalty-tag">(-4 wound)</span></span>
+                        <div class="stat-bar"><div class="stat-bar-fill low" style="width: 31%"></div></div>
                     </div>
                 </div>
-                <div class="action-log-line action-hit">Nasty-looking troll hits Adventurer for 10 dmg (left arm) <span class="action-tag hit">HIT</span></div>
-                <div class="action-log-line action-miss">Adventurer misses Nasty-looking troll <span class="action-tag miss">MISS</span></div>
-                <div class="action-log-line action-hit">Nasty-looking troll hits Adventurer for 8 dmg (torso) <span class="action-tag hit">HIT</span></div>
-                <div class="action-log-line action-player-hit">Adventurer hits Nasty-looking troll for 7 dmg (left leg) <span class="action-tag player-hit">HIT</span></div>
-                <div class="action-log-line action-hit">Nasty-looking troll hits Adventurer for 63 dmg (torso) <span class="action-tag hit">HIT</span></div>
-                <div class="action-log-line action-miss">Adventurer misses Nasty-looking troll <span class="action-tag miss">MISS</span></div>
-                <div class="action-log-line action-hit">Nasty-looking troll hits Adventurer for 7 dmg (torso) <span class="action-tag hit">HIT</span></div>
-                <div class="action-roll">d20(5) +5 vs AC 15 &nbsp;|&nbsp; d20(8) +7 vs AC 2</div>
+                <div class="action-log-line action-miss">Troll misses Adventurer <span class="action-tag miss">MISS</span></div>
+                <div class="action-log-line action-player-hit">Adventurer hits Troll for 6 dmg (right arm) <span class="action-tag player-hit">HIT</span></div>
+                <div class="action-log-line action-wound">Right arm: wounded → mangled (-4 atk) <span class="action-tag wound">WOUND</span></div>
+                <div class="action-log-line action-player-hit">Adventurer hits Troll for 14 dmg (right arm) <span class="action-tag player-hit">CRIT</span></div>
+                <div class="action-log-line action-wound">Right arm: mangled → destroyed (SEVERED) <span class="action-tag wound-sever">SEVER</span></div>
+                <div class="action-log-line action-wound">Troll drops Bloody Axe <span class="action-tag wound">DROP</span></div>
+                <div class="action-log-line action-miss">Troll misses (unarmed, -4 penalty) <span class="action-tag miss">MISS</span></div>
+                <div class="action-log-line action-morale">Troll morale check → RETREAT <span class="action-tag morale">FLEE</span></div>
+                <div class="action-roll">d20(18) +5 vs AC 15 &nbsp;|&nbsp; Confirm: d20(14) +5 vs AC 15 ✓ CRITICAL</div>
             </div>
         </div>
     </div>
 
-    <p class="gameplay-caption fade-in">"Prose from the author on the left. The dice-rolling fun on the right. Both real, both running simultaneously."</p>
+    <p class="gameplay-caption fade-in">The narrative view shows authored prose. The action panel shows the Pathfinder mechanics underneath — wound escalation, equipment drops, morale checks, and the dice that drove it all.</p>
 </section>
 
-<!-- Key Innovations -->
-<section id="innovations">
-    <h2 class="section-title fade-in">Key Innovations</h2>
-
-    <div class="card-grid">
-        <div class="card fade-in">
-            <span class="card-icon">&gt;</span>
-            <h3>Natural Language Commands</h3>
-            <p>Type what you'd naturally say. Pattern matching parses commands at 0ms. LLM classification handles ambiguous input as a fallback — no rigid parser vocabulary to memorize.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">d20</span>
-            <h3>Real Pathfinder Mechanics</h3>
-            <p>Full PF2e three-action economy with multiple attack penalty. Six attributes, base attack bonus, armor class, feats, saving throws. The narrative reads as prose — but the action panel lets you watch the dice roll in real time.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">&#10022;</span>
-            <h3>LLM-Enhanced Narrative</h3>
-            <p>Templates render instantly. LLM narration polishes dramatic moments — combat poetry, scene composition, varied phrasing. Template fallback means nothing breaks if AI is unavailable.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">&#9670;</span>
-            <h3>Graph-Based Dynamic World</h3>
-            <p>Kuzu graph database as single source of truth. Five condition types gate every exit, dialogue, and quest trigger. Persistent topology tracks every entity and relationship in real time.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">&#10078;</span>
-            <h3>Professional Ink Dialogue</h3>
-            <p>The same narrative scripting language behind 80 Days and Heaven's Vault. Authored branching dialogue with state tracking, conditional responses, and deep character development.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">&#9876;</span>
-            <h3>Wound-Location Combat</h3>
-            <p>Attacks target specific body locations. Severity tiers from scratched to destroyed. Limb damage applies real mechanical penalties — a wounded sword arm means worse attacks.</p>
-        </div>
-
-        <div class="card fade-in">
-            <span class="card-icon">{}</span>
-            <h3>Data-Driven Everything</h3>
-            <p>All game logic lives in JSON. Object interactions, NPC conditions, quest triggers, combat templates — change data, change behavior. Zero hardcoded special cases.</p>
-        </div>
-    </div>
-</section>
-
-<!-- For Editorial Writers -->
+<!-- Comparison -->
 <section id="comparison">
-    <h2 class="section-title fade-in">For Editorial Writers</h2>
-    <p class="section-subtitle fade-in">How RPGFuture compares to the landscape.</p>
+    <h2 class="section-title fade-in">How It Compares</h2>
 
     <div class="table-wrapper fade-in">
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Aspect</th>
+                    <th>Feature</th>
                     <th>AI Dungeon</th>
-                    <th>Classic Zork</th>
-                    <th>Choice of Games</th>
-                    <th>Baldur's Gate 3</th>
+                    <th>Classic IF</th>
+                    <th>BG3 / Solasta</th>
+                    <th class="rpgfuture-col">RPGFuture</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Input</strong></td>
-                    <td>Free-form text</td>
-                    <td>Verb-noun parser</td>
-                    <td>Multiple choice</td>
-                    <td>Point-and-click</td>
-                </tr>
-                <tr class="rpgfuture-row">
-                    <td>RPGFuture</td>
-                    <td colspan="4">Natural language — parsed instantly, LLM fallback for ambiguity</td>
+                    <td><strong>Combat</strong></td>
+                    <td>LLM decides</td>
+                    <td>Puzzle logic</td>
+                    <td>Full d20, visible UI</td>
+                    <td class="rpgfuture-cell">Full Pathfinder d20, hidden in prose</td>
                 </tr>
                 <tr>
-                    <td><strong>Mechanics</strong></td>
-                    <td>None (LLM-only)</td>
-                    <td>Puzzle logic</td>
-                    <td>Stat checks</td>
-                    <td>Full d20 (D&amp;D 5e)</td>
+                    <td><strong>Wound System</strong></td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td>HP bar only</td>
+                    <td class="rpgfuture-cell">Per-limb wounds, cascading penalties, equipment drops</td>
                 </tr>
-                <tr class="rpgfuture-row">
-                    <td>RPGFuture</td>
-                    <td colspan="4">Full Pathfinder d20 — hidden from the player, expressed as prose</td>
+                <tr>
+                    <td><strong>Enemy AI</strong></td>
+                    <td>LLM improv</td>
+                    <td>Scripted</td>
+                    <td>Tactical AI</td>
+                    <td class="rpgfuture-cell">Personality-driven morale, moral lines, weighted strategies</td>
                 </tr>
                 <tr>
                     <td><strong>Narrative</strong></td>
                     <td>LLM-generated</td>
                     <td>Hand-authored</td>
-                    <td>Hand-authored</td>
-                    <td>Voice-acted scripts</td>
+                    <td>Voice-acted</td>
+                    <td class="rpgfuture-cell">Hand-authored + LLM polish for dramatic moments</td>
                 </tr>
-                <tr class="rpgfuture-row">
-                    <td>RPGFuture</td>
-                    <td colspan="4">Hand-authored content with LLM polish — authored quality, AI variation</td>
+                <tr>
+                    <td><strong>Dialogue</strong></td>
+                    <td>Free-form</td>
+                    <td>Keyword parser</td>
+                    <td>Branching trees</td>
+                    <td class="rpgfuture-cell">Ink branching + trust-gated secrets + world-state reactions</td>
                 </tr>
                 <tr>
                     <td><strong>Reliability</strong></td>
                     <td>Hallucinations</td>
                     <td>Deterministic</td>
                     <td>Deterministic</td>
-                    <td>Deterministic</td>
-                </tr>
-                <tr class="rpgfuture-row">
-                    <td>RPGFuture</td>
-                    <td colspan="4">Deterministic core — LLM enhances but never controls game state</td>
+                    <td class="rpgfuture-cell">Deterministic core, LLM enhances but never controls state</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <blockquote class="comparison-pullquote fade-in">
-        "Mechanical depth of a tabletop RPG, authored quality of interactive fiction, natural language interface of an AI game — without the hallucination risk."
+        "The mechanical depth of a tabletop RPG, the authored quality of interactive fiction, the natural language of an AI game — without the hallucination risk. Wounds cascade. Enemies think. Every battle reads like a novel."
     </blockquote>
 </section>
 
@@ -234,19 +276,22 @@
         <div class="world-card fade-in">
             <h3>ZORK I</h3>
             <p class="world-source">Infocom (1980) — Reimagined</p>
-            <p>"You are standing in an open field west of a white house, with a boarded front door." The Great Underground Empire, now with real combat, persistent wounds, and a troll that fights back with Pathfinder mechanics.</p>
+            <p>"You are standing in an open field west of a white house, with a boarded front door."</p>
+            <p class="world-highlight">The Great Underground Empire with real combat. Sever the troll's arm and watch it drop its axe. Say "Odysseus" to route the cyclops. The thief wanders the map stealing your treasures — and if you earn its trust, it tells you why.</p>
         </div>
 
         <div class="world-card fade-in">
             <h3>The Village of Hommlet</h3>
             <p class="world-source">Classic D&amp;D Module — Adapted</p>
-            <p>"Beneath its quiet exterior, rumors of ancient evil stir unease among the villagers." A classic dungeon crawl reimagined as prose — NPCs with authored Ink dialogue, faction politics, and a temple that remembers your choices.</p>
+            <p>"Beneath its quiet exterior, rumors of ancient evil stir unease among the villagers."</p>
+            <p class="world-highlight">A village of NPCs with competing loyalties, hidden agendas, and faction politics. Each character remembers how you've treated them. Trust the wrong person, and the consequences ripple through every conversation.</p>
         </div>
 
         <div class="world-card fade-in">
             <h3>The Forgotten Village</h3>
             <p class="world-source">Original Starter World</p>
-            <p>"Every adventure begins somewhere quiet." A purpose-built tutorial world that teaches the mechanics naturally — exploration, dialogue, puzzle-solving, and combat unfold at a measured pace.</p>
+            <p>"Every adventure begins somewhere quiet."</p>
+            <p class="world-highlight">A purpose-built tutorial world that teaches exploration, dialogue, puzzle-solving, and combat through natural play — no instructions, just discovery.</p>
         </div>
     </div>
 </section>
@@ -257,11 +302,11 @@
     <p class="section-subtitle fade-in">A macOS companion app for world creation.</p>
 
     <div class="worldbuilder-content fade-in">
-        <p>WorldBuilder is a visual graph editor for designing RPGFuture worlds. Build locations, connect exits, define NPCs and their dialogue trees, place objects, design quests, and author puzzles — all in a node-based interface that maps directly to the game's graph database.</p>
+        <p>Design your own worlds with a visual graph editor. Build locations, connect exits, define NPCs with full psychological profiles, author Ink dialogue trees, place interactive objects, and design condition-gated quests — all in a node-based interface that maps directly to the game's graph database.</p>
 
         <ul class="worldbuilder-features">
             <li>Visual graph editor with drag-and-drop entity placement</li>
-            <li>Entity inspectors for every game type — characters, objects, locations, quests, puzzles</li>
+            <li>Character inspectors for personality, morale, moral lines, and combat strategy</li>
             <li>AI-assisted content generation for descriptions, dialogue, and flavor text</li>
             <li>10-layer authoring stack — from world skeleton to compiled Ink dialogue</li>
             <li>Import and export complete worlds as validated JSON</li>

@@ -151,6 +151,15 @@ section {
     margin-bottom: 2.5rem;
 }
 
+.hero-caption {
+    max-width: 640px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
 .hero-cta {
     display: inline-block;
     margin-top: 2rem;
@@ -175,9 +184,6 @@ section {
 @keyframes blink {
     50% { opacity: 0; }
 }
-
-.vision p { margin-bottom: 1.25rem; max-width: 720px; }
-.vision strong { color: var(--accent-gold); }
 
 /* --- Narrative Panel --- */
 
@@ -237,6 +243,53 @@ section {
     font-family: var(--font-mono);
     font-size: 0.88rem;
     color: var(--text-prompt);
+}
+
+.narrative-panel .narrative-choice {
+    color: var(--accent-gold);
+    font-size: 0.92em;
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+/* --- Inline Narrative Panel (within feature blocks) --- */
+
+.narrative-panel-inline {
+    margin-top: 1.25rem;
+    max-width: 100%;
+}
+
+/* --- Feature Blocks --- */
+
+.feature-block {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.feature-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.feature-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.75rem;
+}
+
+.feature-block p {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    max-width: 720px;
+    line-height: 1.7;
+}
+
+.feature-block p em {
+    color: var(--text-primary);
+    font-style: italic;
 }
 
 /* --- Gameplay Section --- */
@@ -344,6 +397,14 @@ section {
     color: #4a9;
 }
 
+.action-wound {
+    color: #e8b84b;
+}
+
+.action-morale {
+    color: #7eb8da;
+}
+
 .action-tag {
     font-weight: 700;
     font-size: 0.7rem;
@@ -351,6 +412,25 @@ section {
     border-radius: 3px;
     margin-left: 0.25rem;
     opacity: 0.7;
+}
+
+.action-tag.wound {
+    color: #e8b84b;
+}
+
+.action-tag.wound-sever {
+    color: #e06c60;
+    font-weight: 800;
+}
+
+.action-tag.morale {
+    color: #7eb8da;
+}
+
+.penalty-tag {
+    color: #e8b84b;
+    font-size: 0.7rem;
+    font-weight: 400;
 }
 
 .action-roll {
@@ -444,20 +524,28 @@ section {
     border-bottom: 1px solid var(--border-subtle);
 }
 
+.comparison-table th.rpgfuture-col {
+    color: var(--accent-gold-bright);
+}
+
 .comparison-table td {
     padding: 0.75rem 1rem;
     border-bottom: 1px solid var(--border-subtle);
     color: var(--text-secondary);
 }
 
+.comparison-table td.rpgfuture-cell {
+    color: var(--accent-gold);
+    font-weight: 600;
+    background: rgba(201, 168, 76, 0.06);
+}
+
 .comparison-table tr:nth-child(even) td {
     background: rgba(18, 18, 26, 0.5);
 }
 
-.comparison-table tr.rpgfuture-row td {
-    color: var(--accent-gold);
-    font-weight: 600;
-    background: rgba(201, 168, 76, 0.06);
+.comparison-table tr:nth-child(even) td.rpgfuture-cell {
+    background: rgba(201, 168, 76, 0.08);
 }
 
 .comparison-pullquote {
@@ -498,6 +586,13 @@ section {
     font-size: 0.95rem;
 }
 
+.world-card .world-highlight {
+    font-style: normal;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+}
+
 /* --- WorldBuilder --- */
 
 .worldbuilder-content p {
@@ -511,7 +606,7 @@ section {
 }
 
 .worldbuilder-features li { padding: 0.3rem 0; color: var(--text-secondary); font-size: 0.95rem; }
-.worldbuilder-features li::before { content: '◆ '; color: var(--accent-gold); }
+.worldbuilder-features li::before { content: '\25C6 '; color: var(--accent-gold); }
 
 /* --- Footer --- */
 
@@ -585,5 +680,9 @@ section {
 
     .card-grid {
         grid-template-columns: 1fr;
+    }
+
+    .feature-block h3 {
+        font-size: 1.05rem;
     }
 }

@@ -259,6 +259,21 @@ section {
     max-width: 100%;
 }
 
+/* --- What's New Section --- */
+
+.whats-new-narrative {
+    margin-top: 2.5rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.narrative-input-inline {
+    font-family: var(--font-mono);
+    color: var(--text-prompt);
+    font-size: 0.9em;
+}
+
 /* --- Feature Blocks --- */
 
 .feature-block {

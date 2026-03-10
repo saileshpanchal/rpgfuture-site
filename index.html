@@ -21,6 +21,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#worlds">Worlds</a></li>
             <li><a href="#worldbuilder">WorldBuilder</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
         </ul>
     </div>
 </nav>
@@ -46,9 +47,39 @@
 <!-- What's New -->
 <section id="whats-new">
     <h2 class="section-title fade-in">What's New</h2>
-    <p class="section-subtitle fade-in">Combat just got deeper. Enemies fight smarter, and you have more ways to fight back.</p>
+    <p class="section-subtitle fade-in">Combat is now suspense. Choices are dramatic intentions, not action menus.</p>
 
     <div class="card-grid">
+        <div class="card fade-in">
+            <span class="card-icon">&#9888;</span>
+            <h3>Dramatic Combat Choices</h3>
+            <p>No more "Attack / Defend / Flee" menus. The Tension Engine reads the scene — your wounds, the enemy's state, the torch guttering on the wall — and presents 2-4 emotionally loaded intentions. "Press the wounded troll," "Grab the torch and use fire against its weakness," or "Run for the northern passage." The d20 engine still resolves underneath. You just don't see it.</p>
+        </div>
+
+        <div class="card fade-in">
+            <span class="card-icon">&#9203;</span>
+            <h3>Scene Pressure</h3>
+            <p>Four invisible dimensions drive every combat moment: threat, urgency, stakes, and momentum. When the troll is regenerating and the torch is about to go out, urgency spikes. When you sever its arm and it staggers, momentum swings your way. The prose tightens and loosens with the tension — calm scenes offer measured choices, desperate ones give you binary do-or-die.</p>
+        </div>
+
+        <div class="card fade-in">
+            <span class="card-icon">&#128293;</span>
+            <h3>Soft Countdowns</h3>
+            <p>"The troll's wounds are knitting shut." That's not flavor text — it's a countdown. In three more actions, it fully regenerates 20 HP. Grab the torch to pause its healing. Or ignore the timer and press the attack before it fires. Countdowns create real urgency without exposing numbers — you feel the time pressure through the prose itself.</p>
+        </div>
+    </div>
+
+    <div class="whats-new-narrative fade-in">
+        <div class="narrative-panel">
+            <p class="narrative-combat">The troll snarls, wounded but still dangerous. Already you can see the scratches on its hide knitting shut. The torch on the wall sputters in the draft.</p>
+            <p class="narrative-combat">You need to decide — <strong>strike</strong> while it's overextended, <strong>grab the torch</strong> to use fire against its weakness, or <strong>fall back</strong> north.</p>
+            <p><span class="narrative-input-inline">&gt; grab the torch</span></p>
+            <p class="narrative-combat-intense">You snatch the guttering torch from the wall and thrust it at the troll's face! The creature shrieks and recoils, its regeneration halting as flames lick at its flesh.</p>
+        </div>
+        <p class="gameplay-caption">"Every choice changes the pressure. Grabbing the torch paused the regeneration countdown — buying time the troll didn't want to give."</p>
+    </div>
+
+    <div class="card-grid" style="margin-top: 2.5rem;">
         <div class="card fade-in">
             <span class="card-icon">&#9884;</span>
             <h3>Combat Maneuvers</h3>
@@ -66,18 +97,6 @@
             <h3>Smarter Enemies</h3>
             <p>Enemies no longer just swing and hope. An aggressive troll hits harder but leaves openings. A defensive knight raises their shield and waits for your mistake. A cornered goblin drops its weapon and begs for mercy. NPC strategies now have real mechanical teeth.</p>
         </div>
-    </div>
-
-    <div class="whats-new-narrative fade-in">
-        <div class="narrative-panel">
-            <p class="narrative-combat">The troll winds up with its bloody axe, leaving its legs exposed.</p>
-            <p><span class="narrative-input-inline">&gt; trip the troll</span></p>
-            <p class="narrative-combat">You sweep low, catching the troll behind its knees. It crashes to the ground with a thunderous impact!</p>
-            <p class="narrative-combat">The troll scrambles on all fours, struggling to rise.</p>
-            <p><span class="narrative-input-inline">&gt; strike the troll</span></p>
-            <p class="narrative-combat-intense">You bring your blade down on the prone creature. The troll howls as steel bites deep into its shoulder.</p>
-        </div>
-        <p class="gameplay-caption">"Trip it, then finish it. Combat maneuvers create real tactical openings."</p>
     </div>
 </section>
 
@@ -285,6 +304,13 @@
                     <td class="rpgfuture-cell">Hand-authored + LLM polish for dramatic moments</td>
                 </tr>
                 <tr>
+                    <td><strong>Combat Choices</strong></td>
+                    <td>Free-form</td>
+                    <td>Verb parser</td>
+                    <td>Action menu UI</td>
+                    <td class="rpgfuture-cell">Dramatic intentions driven by scene pressure, hidden mechanics</td>
+                </tr>
+                <tr>
                     <td><strong>Dialogue</strong></td>
                     <td>Free-form</td>
                     <td>Keyword parser</td>
@@ -303,7 +329,7 @@
     </div>
 
     <blockquote class="comparison-pullquote fade-in">
-        "The mechanical depth of a tabletop RPG, the authored quality of interactive fiction, the natural language of an AI game — without the hallucination risk. Wounds cascade. Enemies think. Every battle reads like a novel."
+        "The mechanical depth of a tabletop RPG, the authored quality of interactive fiction, the natural language of an AI game — without the hallucination risk. Wounds cascade. Enemies think. Tension rises. Every battle reads like a novel."
     </blockquote>
 </section>
 
@@ -353,9 +379,65 @@
     </div>
 </section>
 
+<!-- Roadmap -->
+<section id="roadmap">
+    <h2 class="section-title fade-in">Roadmap</h2>
+    <p class="section-subtitle fade-in">What's been built. What's coming next.</p>
+
+    <div class="roadmap-timeline fade-in">
+        <div class="roadmap-phase completed">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phases 0-10 <span class="roadmap-status">Complete</span></h3>
+                <p>Core engine, Pathfinder combat (d20, 3-action economy, MAP), limb-specific wounds, bleeding, equipment drops, morale, fumbles, 100+ NPC strategies, combat maneuvers (trip/disarm/grapple/shove), attacks of opportunity, LLM narrative pipeline, Ink dialogue, action composition, graph database.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase completed">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 11 — Living World <span class="roadmap-status">Complete</span></h3>
+                <p>Ink dialogue tunnels and conditional branches. Turn-based timed event scheduler (NPC movement, environmental changes, quest timers). NPC first-contact player awareness — NPCs react to your appearance, weapons, wounds, and demeanor when they first see you. Hostile beat sequencing with initiative-driven tension.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase completed">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 12 — Tension Engine <span class="roadmap-status">Complete</span></h3>
+                <p>Dramatic combat choices driven by scene pressure instead of action menus. Four-dimensional pressure model (threat, urgency, stakes, momentum). Soft countdowns creating narrative time pressure. Consequence echoes that persist across scenes. Tension-aware LLM narration — prose quality rises with dramatic stakes.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase upcoming">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 13 — Procedural World Generation <span class="roadmap-status upcoming-status">Next</span></h3>
+                <p>AI-assisted generation of new locations, NPCs, quests, and puzzles from world templates. Expand beyond hand-authored content while maintaining narrative quality through the 10-layer authoring stack.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase upcoming">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 14 — Spellcasting <span class="roadmap-status upcoming-status">Planned</span></h3>
+                <p>Full spell slot system with prepared and spontaneous casting. Verbal, somatic, and material components. Spell effects resolved through the combat engine with LLM-narrated results. Area-of-effect targeting, saving throws, and concentration mechanics.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase upcoming">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 15 — Multiplayer <span class="roadmap-status upcoming-status">Planned</span></h3>
+                <p>Cooperative play with shared world state. Party-based combat with coordinated dramatic choices. Each player sees their own narrative perspective of shared encounters.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="footer">
-    <p class="footer-tech">Built with Swift 6.2 | Kuzu Graph DB | Ink Narrative | Pathfinder d20</p>
+    <p class="footer-tech">Built with Swift 6.2 | Kuzu Graph DB | Ink Narrative | Pathfinder d20 | Tension Engine</p>
     <p class="footer-platform">Coming soon to iOS 26+ and macOS 26+</p>
     <p><a href="https://github.com/saileshpanchal/rpgfuture-site">GitHub</a></p>
 </footer>

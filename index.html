@@ -47,7 +47,41 @@
 <!-- What's New -->
 <section id="whats-new">
     <h2 class="section-title fade-in">What's New</h2>
-    <p class="section-subtitle fade-in">Combat is now suspense. Choices are dramatic intentions, not action menus.</p>
+    <p class="section-subtitle fade-in">NPCs remember. Companions follow. The world has a permanent history.</p>
+
+    <div class="card-grid">
+        <div class="card fade-in">
+            <span class="card-icon">&#129504;</span>
+            <h3>NPCs That Remember</h3>
+            <p>Every conversation is recorded as a structured event in the world's graph database. Kill a guard? Elmo witnessed it. Ask about the inn? The innkeeper remembers your question three sessions later. NPC memory isn't an LLM summary that degrades — it's queryable fact stored as typed graph nodes. The relationship isn't a number from 0-100. It's a structured record of what happened, who was there, and what was agreed.</p>
+        </div>
+
+        <div class="card fade-in">
+            <span class="card-icon">&#129494;</span>
+            <h3>Party Companions</h3>
+            <p>Ask Elmo to join you and he follows — not as a flag, but as an autonomous agent with his own arc. He moves when you move, fights on your side in combat, and reacts to the rooms you explore together. When the arc completes — you reach the inn he was heading to — he parts ways naturally. Companions aren't permanent followers. They're NPCs with intersecting agendas.</p>
+        </div>
+
+        <div class="card fade-in">
+            <span class="card-icon">&#9878;</span>
+            <h3>Ally Combat</h3>
+            <p>Companions fight alongside you with their own initiative, attacks, and behavior. Set Elmo to aggressive and he charges the nearest enemy. Tell him to hold back and he defends only when targeted. Party members get their own 3-action turns in initiative order — but you always act first. If an ally falls, they enter a downed state before death, giving you a chance to turn the tide.</p>
+        </div>
+    </div>
+
+    <div class="whats-new-narrative fade-in">
+        <div class="narrative-panel">
+            <p class="narrative-combat">Elmo follows you into the room. He tenses, scanning for threats.</p>
+            <p class="narrative-combat">You say to Elmo: "Where is the inn?"</p>
+            <p class="narrative-combat">Elmo jerks a thumb northward. "The Welcome Wench — just up the road. Ostler Gundigoot runs the place. Tell him Elmo sent ya."</p>
+            <p class="narrative-combat">Three rooms later, you ask about the inn again.</p>
+            <p class="narrative-combat-intense">Elmo scratches his head. "Already told you — the Welcome Wench, north of here. Gundigoot's place. You forget already?" He grins.</p>
+        </div>
+        <p class="gameplay-caption">"Elmo didn't repeat himself. The graph recorded the first exchange as a structured event. When asked again, the anti-repetition system told the LLM to acknowledge the prior answer — not parrot it."</p>
+    </div>
+
+    <h3 class="section-title fade-in" style="font-size: 1.4rem; margin-top: 3rem;">Previously</h3>
+    <p class="section-subtitle fade-in">Combat is suspense. Choices are dramatic intentions, not action menus.</p>
 
     <div class="card-grid">
         <div class="card fade-in">
@@ -315,7 +349,21 @@
                     <td>Free-form</td>
                     <td>Keyword parser</td>
                     <td>Branching trees</td>
-                    <td class="rpgfuture-cell">Ink branching + trust-gated secrets + world-state reactions</td>
+                    <td class="rpgfuture-cell">Ink branching + trust-gated secrets + graph-backed memory</td>
+                </tr>
+                <tr>
+                    <td><strong>NPC Memory</strong></td>
+                    <td>Context window</td>
+                    <td>Flags only</td>
+                    <td>Approval meter</td>
+                    <td class="rpgfuture-cell">Graph events: witnessed, reacted to, told — queryable forever</td>
+                </tr>
+                <tr>
+                    <td><strong>Companions</strong></td>
+                    <td>LLM decides</td>
+                    <td>Fixed followers</td>
+                    <td>Party management UI</td>
+                    <td class="rpgfuture-cell">Arc-based accompaniment, ally combat, ambient reactions</td>
                 </tr>
                 <tr>
                     <td><strong>Reliability</strong></td>
@@ -409,10 +457,26 @@
             </div>
         </div>
 
+        <div class="roadmap-phase completed">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 13 — NPC Dialogue Memory <span class="roadmap-status">Complete</span></h3>
+                <p>Graph-based narrative event system. NPCs remember what they witnessed, what the player told them, and how they feel about it. Session-scoped coherence buffer prevents same-conversation repetition. Graph-extracted briefings give each NPC accurate, permanent memory without LLM hallucination. Anti-repetition directives keep conversations fresh across multiple exchanges.</p>
+            </div>
+        </div>
+
+        <div class="roadmap-phase completed">
+            <span class="roadmap-marker"></span>
+            <div class="roadmap-content">
+                <h3>Phase 14 — Party Companions <span class="roadmap-status">Complete</span></h3>
+                <p>Arc-based party accompaniment — NPCs join for narrative reasons and resume autonomous behavior when the arc completes. Auto-follow with single-tick movement, conditional exit blocking with breadcrumb reminders, party-aware room descriptions, template-based ambient reactions, and full ally combat with behavior modes (aggressive, defensive, hold-back).</p>
+            </div>
+        </div>
+
         <div class="roadmap-phase upcoming">
             <span class="roadmap-marker"></span>
             <div class="roadmap-content">
-                <h3>Phase 13 — Procedural World Generation <span class="roadmap-status upcoming-status">Next</span></h3>
+                <h3>Phase 15 — Procedural World Generation <span class="roadmap-status upcoming-status">Next</span></h3>
                 <p>AI-assisted generation of new locations, NPCs, quests, and puzzles from world templates. Expand beyond hand-authored content while maintaining narrative quality through the 10-layer authoring stack.</p>
             </div>
         </div>
@@ -420,7 +484,7 @@
         <div class="roadmap-phase upcoming">
             <span class="roadmap-marker"></span>
             <div class="roadmap-content">
-                <h3>Phase 14 — Spellcasting <span class="roadmap-status upcoming-status">Planned</span></h3>
+                <h3>Phase 16 — Spellcasting <span class="roadmap-status upcoming-status">Planned</span></h3>
                 <p>Full spell slot system with prepared and spontaneous casting. Verbal, somatic, and material components. Spell effects resolved through the combat engine with LLM-narrated results. Area-of-effect targeting, saving throws, and concentration mechanics.</p>
             </div>
         </div>
@@ -428,7 +492,7 @@
         <div class="roadmap-phase upcoming">
             <span class="roadmap-marker"></span>
             <div class="roadmap-content">
-                <h3>Phase 15 — Multiplayer <span class="roadmap-status upcoming-status">Planned</span></h3>
+                <h3>Phase 17 — Multiplayer <span class="roadmap-status upcoming-status">Planned</span></h3>
                 <p>Cooperative play with shared world state. Party-based combat with coordinated dramatic choices. Each player sees their own narrative perspective of shared encounters.</p>
             </div>
         </div>
